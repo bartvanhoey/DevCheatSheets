@@ -10,5 +10,7 @@ exclude = [
   "http://localhost:8001",
 ]
 
+# `accept` replaces lychee's default status list rather than extending it, so the normal
+# 200-299 success range must be listed explicitly alongside the 403 workaround below.
 # npm returns 403 to lychee's bot user agent for this package page even though it's live.
-accept = ["403"]
+accept = ["200..=299", "403"]
