@@ -4,24 +4,6 @@
 
 Docs: <https://herdr.dev/docs/>
 
-## Howto install Herdr
-
-```powershell
-# Windows (PowerShell)
-powershell -ExecutionPolicy Bypass -c "irm https://herdr.dev/install.ps1 | iex"
-```
-
-```bash
-# Linux / macOS
-curl -fsSL https://herdr.dev/install.sh | sh
-
-# macOS (Homebrew)
-brew install herdr
-
-# Cross-platform (mise)
-mise use -g herdr
-```
-
 ## Howto start, detach and reattach a session
 
 ```bash
@@ -32,40 +14,7 @@ herdr
 # Press ctrl+b, release, then press q
 ```
 
-## Default keybindings
-
-The default prefix is `ctrl+b`. Press it, release, then press the next key.
-
-| Action | Key |
-|--------|-----|
-| Show all active bindings | `prefix` `?` |
-| New tab | `prefix` `c` |
-| Split right | `prefix` `v` |
-| Split down | `prefix` `-` |
-| Move focus between panes | `prefix` `h` `j` `k` `l` |
-| Zoom focused pane | `prefix` `z` |
-| Close pane | `prefix` `x` |
-| Swap panes | `prefix` `shift+h/j/k/l` |
-| Resize mode | `prefix` `r` |
-| Copy mode | `prefix` `[` |
-| Next / previous tab | `prefix` `n` / `prefix` `p` |
-| Jump to tab 1-9 | `prefix` `1`..`9` |
-| Rename tab | `prefix` `shift+t` |
-| Close tab | `prefix` `shift+x` |
-| New workspace | `prefix` `shift+n` |
-| Rename workspace | `prefix` `shift+w` |
-| Close workspace | `prefix` `shift+d` |
-| Workspace navigation | `prefix` `w` |
-| Goto picker | `prefix` `g` |
-| Toggle sidebar | `prefix` `b` |
-| Detach | `prefix` `q` |
-
-## Howto configure Herdr
-
-Herdr works without a config file. The file lives at:
-
-- Linux / macOS: `~/.config/herdr/config.toml`
-- Windows: `%APPDATA%\herdr\config.toml`
+## Useful commands
 
 ```bash
 # Show the resolved config path
@@ -76,16 +25,97 @@ herdr --default-config
 
 # Apply config changes without restarting panes
 herdr server reload-config
+
+# Check the config for errors
+herdr config check
 ```
 
 Set the `HERDR_CONFIG_PATH` environment variable to use a different config file.
 
 Main sections: `[keys]`, `[theme]`, `[ui]`, `[terminal]`, `[worktrees]`, `[remote]`, `[server]`, `[session]`.
 
-## Howto connect to a remote machine
+## My keybindings
+
+Herdr works with a config file. The file lives at:
+
+- Linux / macOS: `~/.config/herdr/config.toml`
+- Windows: `%APPDATA%\herdr\config.toml`
 
 ```bash
-herdr --remote
+# C:\Users\<YOUR_USERNAME>\AppData\Roaming\herdr\config.toml
+
+onboarding = false
+
+[ui.sound]
+enabled = false
+
+[theme]
+name = "catppuccin"
+auto_switch = false
+
+[theme.custom]
+panel_bg = "none"
+surface0 = "#e2e2e2"
+surface1 = "#d7d7d7"
+surface_dim = "#e8e8e8"
+overlay0 = "#6b6b6b"
+overlay1 = "#565656"
+text = "#ffffffd7"
+subtext0 = "#474747"
+red = "#a8334c"
+green = "#4f6c31"
+yellow = "#944927"
+blue = "#286486"
+mauve = "#88507d"
+teal = "#3b8992"
+peach = "#944927"
+accent = "#4f6c31"
+
+[ui]
+status_indicators = "symbols"
+prompt_new_tab_name = false
+
+[ui.toast]
+delivery = "herdr"
+
+[keys]
+# Tabs: alt+left/right, alt+1..9 for direct jump
+previous_tab = "alt+left"
+next_tab = "alt+right"
+switch_tab = "alt+1..9"
+new_tab = "alt+t" 
+
+# Spaces (workspaces): alt+up/down
+previous_workspace = "alt+up"
+next_workspace = "alt+down"
+
+# F1: jump to the target of the latest notification (e.g. an agent that finished)
+open_notification_target = "f1"
 ```
 
-SSH keepalive and connection reuse are set in the `[remote]` section of the config.
+## Open/edit config.toml file in Herdr in nano (or your preferred editor)
+
+```bash
+# Open the config file in nano (or your preferred editor)
+        
+
+```powershell
+## add the herdr-config function to your PowerShell profile (if not already present)
+if (!(Test-Path $PROFILE)) { New-Item -ItemType File -Path $PROFILE -Force | Out-Null }
+
+Add-Content $PROFILE @'
+
+function herdr-config {
+    $nano = if (Get-Command nano -ErrorAction SilentlyContinue) { 'nano' } else { 'C:\Program Files\Git\usr\bin\nano.exe' }
+    & $nano "$env:APPDATA\herdr\config.toml"
+    herdr config check
+    herdr server reload-config
+}
+'@
+
+. $PROFILE
+
+## when added, you can run the following command to open the config file in Herdr:
+herdr-config
+
+```
