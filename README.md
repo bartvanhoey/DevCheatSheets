@@ -61,6 +61,7 @@ Topics include Git, Docker, Kubernetes, .NET, Blazor, VS Code, Rider, and more.
 | [Command Line Commands](Documents/TopTenCommandLineCommands.md) |
 | [PowerShell](Documents/PowerShell.md) |
 | [Chrome](Documents/Chrome.md) |
+| [Herdr](Documents/Herdr.md) |
 
 ## Setup
 
