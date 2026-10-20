@@ -17,6 +17,10 @@ herdr
 ## Useful commands
 
 ```bash
+
+# Update herdr to the latest version
+herdr update
+
 # Show the resolved config path
 herdr --help
 
