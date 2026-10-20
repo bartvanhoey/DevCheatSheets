@@ -55,21 +55,21 @@ auto_switch = false
 
 [theme.custom]
 panel_bg = "none"
-surface0 = "#e2e2e2"
-surface1 = "#d7d7d7"
-surface_dim = "#e8e8e8"
-overlay0 = "#6b6b6b"
-overlay1 = "#565656"
+surface0 = "#313244"
+surface1 = "#45475a"
+surface_dim = "#1e1e2e"
+overlay0 = "#6c7086"
+overlay1 = "#7f849c"
 text = "#fff"
-subtext0 = "#474747"
-red = "#a8334c"
-green = "#4f6c31"
+subtext0 = "#bac2de"
+red = "#f38ba8"
+green = "#a6e3a1"
 yellow = "#FFFF00"
-blue = "#286486"
-mauve = "#88507d"
-teal = "#3b8992"
-peach = "#944927"
-accent = "#4f6c31"
+blue = "#89b4fa"
+mauve = "#cba6f7"
+teal = "#94e2d5"
+peach = "#fab387"
+accent = "#a6e3a1"
 
 [ui]
 status_indicators = "symbols"
@@ -99,7 +99,7 @@ previous_tab = "alt+left"
 next_tab = "alt+right"
 switch_tab = "alt+1..9"
 new_tab = "alt+t"
-close_tab = "alt+shift+t"
+close_tab = "alt+w"
 rename_tab = "f2"
 move_tab_previous = "alt+shift+left"
 move_tab_next = "alt+shift+right"
@@ -110,9 +110,12 @@ reload_config = "f5"
 # Spaces (workspaces): alt+up/down
 previous_workspace = "alt+up"
 next_workspace = "alt+down"
+close_workspace = "alt+shift+w"
 
 # F1: jump to the target of the latest notification (e.g. an agent that finished)
 open_notification_target = "f1"
+
+
 
 ```
 
