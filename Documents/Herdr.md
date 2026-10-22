@@ -14,6 +14,21 @@ herdr
 # Press ctrl+b, release, then press q
 ```
 
+## Howto reload the Herdr config
+
+After editing `config.toml`, apply the changes without restarting herdr or its panes:
+
+- Inside herdr: press `F5` (bound by `reload_config = "f5"` under `[keys]`)
+- From a shell:
+
+```bash
+# Optional: check the config for errors first
+herdr config check
+
+# Reload the config
+herdr server reload-config
+```
+
 ## Useful commands
 
 ```bash
