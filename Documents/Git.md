@@ -397,9 +397,6 @@ git apply
 git restore --source=HEAD --staged --worktree -- .
 ```
 
-
-
-
 ### Howto keep a file in a git repo but don't track changes
 
 ```bash
@@ -447,4 +444,12 @@ git push
 git push origin --delete <branch-name>
 git branch -d <branch>
 git checkout -b <new-branch-name>
+```
+
+## Howto create global git aliases
+
+I run the following command `git devpull` and it will checkout the dev branch and pull the latest changes from the remote dev branch.
+
+```bash
+  git config --global alias.devpull '!git checkout dev && git pull'
 ```
