@@ -74,6 +74,8 @@ auto_switch = false
 
 [theme.custom]
 panel_bg = "none"
+active_row_bg = "#585b70"
+selection_bg = "#3f5f9f"
 surface0 = "#313244"
 surface1 = "#45475a"
 surface_dim = "#1e1e2e"
@@ -93,6 +95,8 @@ accent = "#a6e3a1"
 [ui]
 status_indicators = "symbols"
 prompt_new_tab_name = false
+sidebar_width = 32
+sidebar_max_width = 48
 
 # Sidebar: which columns each row shows for agents and for spaces.
 [ui.sidebar.agents]
@@ -129,13 +133,37 @@ reload_config = "f5"
 # Spaces (workspaces): alt+up/down
 previous_workspace = "alt+up"
 next_workspace = "alt+down"
+new_workspace = "alt+shift+t"
 close_workspace = "alt+shift+w"
 
 # F1: jump to the target of the latest notification (e.g. an agent that finished)
 open_notification_target = "f1"
 
 
+# Move the active workspace up/down in the sidebar (no native key exists; uses the socket API)
+[[keys.command]]
+key = "alt+shift+up"
+type = "shell"
+command = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:/Users/VanhoeyB/.herdr/scripts/move-workspace.ps1 up"
+description = "move workspace up"
 
+[[keys.command]]
+key = "alt+shift+down"
+type = "shell"
+command = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:/Users/VanhoeyB/.herdr/scripts/move-workspace.ps1 down"
+description = "move workspace down"
+
+[[keys.command]]
+key = "prefix+f"
+type = "plugin_action"
+command = "herdr-file-viewer.open-file-viewer-windows"
+description = "open file viewer in split"
+
+[[keys.command]]
+key = "prefix+shift+f"
+type = "plugin_action"
+command = "herdr-file-viewer.open-file-viewer-tab-windows"
+description = "open file viewer in tab"
 ```
 
 ## Plugin: herdr-file-viewer
