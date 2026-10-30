@@ -161,10 +161,10 @@ new_workspace = "alt+shift+t"
 close_workspace = "alt+shift+w"
 
 # Panes: move focus without the prefix
-focus_pane_left = "alt+h"
-focus_pane_down = "alt+j"
-focus_pane_up = "alt+k"
-focus_pane_right = "alt+l"
+focus_pane_left = "alt+l"
+focus_pane_down = "alt+d"
+focus_pane_up = "alt+u"
+focus_pane_right = "alt+r"
 
 # F1: jump to the target of the latest notification (e.g. an agent that finished)
 open_notification_target = "f1"
@@ -207,6 +207,20 @@ herdr plugin install smarzban/herdr-file-viewer
 ```
 
 The shortcuts (`prefix+f` for a split, `prefix+shift+f` for a tab) are already in the `config.toml` under [My keybindings](#my-keybindings) above. They use the Windows `-windows` action IDs; on Linux/macOS drop the `-windows` suffix. Reload with `F5` after editing.
+
+### Fix: "Markdown renderer (glow) not found; showing plain text."
+
+The file viewer renders Markdown files with [glow](https://github.com/charmbracelet/glow). Without it, `.md` files are shown as plain text. Install it on Windows with winget:
+
+```powershell
+winget install charmbracelet.glow
+```
+
+Check the install, then restart the terminal (so `PATH` is refreshed) and reopen herdr:
+
+```powershell
+glow --version
+```
 
 ## Open/edit config.toml file in Herdr in nano (or your preferred editor)
 
