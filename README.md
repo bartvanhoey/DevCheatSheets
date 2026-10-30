@@ -8,60 +8,60 @@ Topics include Git, Docker, Kubernetes, .NET, Blazor, VS Code, Rider, and more.
 
 ## IDE & Editors
 
-| Topic |
-|-------|
-| [VS Code](Documents/VsCode.md) |
-| [Rider Keyboard Shortcuts](Documents/Rider.md) |
-| [Vim Editor](Documents/VimEditor.md) |
-| [Notepad++](Documents/NotepadPlusPlus.md) |
+| Topic | Description |
+|-------|-------------|
+| [VS Code](Documents/VsCode.md) | Favorite shortcuts, extensions and settings tweaks |
+| [Rider Keyboard Shortcuts](Documents/Rider.md) | Favorite shortcuts (Visual Studio keymap) and tips |
+| [Vim Editor](Documents/VimEditor.md) | Essential commands to edit, save and quit |
+| [Notepad++](Documents/NotepadPlusPlus.md) | Notepad++ tips and tricks |
 
 ## DevOps & Cloud
 
-| Topic |
-|-------|
-| [Docker](Documents/Docker.md) |
-| [Kubernetes](Documents/Kubernetes.md) |
-| [Azure Kubernetes Service](Documents/AKS.md) |
-| [Azurite](Documents/Azurite.md) |
-| [Ngrok](Documents/Ngrok.md) |
-| [Insomnia](Documents/Insomnia.md) |
+| Topic | Description |
+|-------|-------------|
+| [Docker](Documents/Docker.md) | Commands for images, containers, Compose, volumes and Docker Hub |
+| [Kubernetes](Documents/Kubernetes.md) | K8S dashboard setup, RBAC fix and kubectl commands |
+| [Azure Kubernetes Service](Documents/AKS.md) | Connect kubectl to an AKS cluster, DNS zones and cluster deletion |
+| [Azurite](Documents/Azurite.md) | Install and run the local Azure Storage emulator |
+| [Ngrok](Documents/Ngrok.md) | Expose localhost through tunnels, incl. multiple ports and scripts |
+| [Insomnia](Documents/Insomnia.md) | Chain API requests with environment variables |
 
 ## .NET & C#
 
-| Topic |
-|-------|
-| [.NET](Documents/DotNet.md) |
-| [EF Core](Documents/EntityFrameworkCore.md) |
-| [ABP CLI](Documents/ABPcli.md) |
-| [Advanced C#](Documents/AdvancedCSharp.md) |
-| [Blazor](Documents/Blazor.md) |
+| Topic | Description |
+|-------|-------------|
+| [.NET](Documents/DotNet.md) | dotnet CLI commands for solutions, projects and SDK versions |
+| [EF Core](Documents/EntityFrameworkCore.md) | EF Core tools and migration commands |
+| [ABP CLI](Documents/ABPcli.md) | Install, upgrade and use the ABP Framework CLI |
+| [Advanced C#](Documents/AdvancedCSharp.md) | Advanced C# concepts a senior developer uses daily |
+| [Blazor](Documents/Blazor.md) | Blazor tips: file nesting, debug assets and HTTPS dev certificate |
 
 ## Frontend & CSS
 
-| Topic |
-|-------|
-| [Tailwind CSS](Documents/TailwindCss.md) |
-| [CSS](Documents/Css.md) |
-| [Next.js](Documents/NextJs.md) |
+| Topic | Description |
+|-------|-------------|
+| [Tailwind CSS](Documents/TailwindCss.md) | Tailwind CLI setup and utility classes |
+| [CSS](Documents/Css.md) | CSS notes, incl. cascade layers |
+| [Next.js](Documents/NextJs.md) | Next.js setup, fixes and useful npm packages |
 
 ## Productivity & Learning
 
-| Topic |
-|-------|
-| [Boost your Productivity](Documents/BoostProductivity.md) |
-| [Refactoring Techniques](Documents/RefactoringTechniques.md) |
-| [10 Options for Maintainable .NET Apps](Documents/ScottSauber10OptionsToCreateMoreMaintainableDotNetApps.md) |
-| [Useful Claude Code Skills](Documents/UsefulClaudeCodeSkills.md) |
+| Topic | Description |
+|-------|-------------|
+| [Boost your Productivity](Documents/BoostProductivity.md) | Ways to enhance developer productivity |
+| [Refactoring Techniques](Documents/RefactoringTechniques.md) | What makes code hard to work with and how to clean it up |
+| [10 Options for Maintainable .NET Apps](Documents/ScottSauber10OptionsToCreateMoreMaintainableDotNetApps.md) | Scott Sauber's 10 options for more maintainable .NET apps |
+| [Useful Claude Code Skills](Documents/UsefulClaudeCodeSkills.md) | Claude Code skills and commands worth using |
 
 ## Tools & General
 
-| Topic |
-|-------|
-| [All about Git](Documents/Git.md) |
-| [Command Line Commands](Documents/TopTenCommandLineCommands.md) |
-| [PowerShell](Documents/PowerShell.md) |
-| [Chrome](Documents/Chrome.md) |
-| [Herdr](Documents/Herdr.md) |
+| Topic | Description |
+|-------|-------------|
+| [All about Git](Documents/Git.md) | Git and GitHub CLI tips, authentication and common fixes |
+| [Command Line Commands](Documents/TopTenCommandLineCommands.md) | Handy command line commands, e.g. find the process on a port |
+| [PowerShell](Documents/PowerShell.md) | PowerShell one-liners for CSV, JSON and code statistics |
+| [Chrome](Documents/Chrome.md) | Chrome keyboard shortcuts and extensions |
+| [Herdr](Documents/Herdr.md) | Herdr terminal multiplexer for AI agents: keys, config and plugins |
 
 ## Setup
 
