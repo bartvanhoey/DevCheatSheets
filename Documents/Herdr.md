@@ -32,7 +32,6 @@ herdr server reload-config
 ## Useful commands
 
 ```bash
-
 # Update herdr to the latest version
 herdr update
 
@@ -60,7 +59,7 @@ Herdr works with a config file. The file lives at:
 - Linux / macOS: `~/.config/herdr/config.toml`
 - Windows: `%APPDATA%\herdr\config.toml`
 
-```bash
+```toml
 # C:\Users\<YOUR_USERNAME>\AppData\Roaming\herdr\config.toml
 
 onboarding = false
@@ -180,12 +179,10 @@ The shortcuts (`prefix+f` for a split, `prefix+shift+f` for a tab) are already i
 
 ## Open/edit config.toml file in Herdr in nano (or your preferred editor)
 
-```bash
-# Open the config file in nano (or your preferred editor)
-        
+Add a `herdr-config` function to your PowerShell profile. It opens the config in nano (or your preferred editor), checks it and reloads it:
 
 ```powershell
-## add the herdr-config function to your PowerShell profile (if not already present)
+# add the herdr-config function to your PowerShell profile (if not already present)
 if (!(Test-Path $PROFILE)) { New-Item -ItemType File -Path $PROFILE -Force | Out-Null }
 
 Add-Content $PROFILE @'
@@ -200,7 +197,6 @@ function herdr-config {
 
 . $PROFILE
 
-## when added, you can run the following command to open the config file in Herdr:
+# when added, you can run the following command to open the config file in Herdr:
 herdr-config
-
 ```
