@@ -54,6 +54,16 @@ focus_pane_up = "alt+u"
 focus_pane_right = "alt+r"
 ```
 
+## Howto close the active pane
+
+Bind a direct key under `[keys]` (see [My keybindings](#my-keybindings)) and reload with `F5`:
+
+```toml
+close_pane = "alt+x"
+```
+
+Now `alt+x` closes the active pane.
+
 ## Useful commands
 
 ```bash
@@ -165,6 +175,9 @@ focus_pane_left = "alt+l"
 focus_pane_down = "alt+d"
 focus_pane_up = "alt+u"
 focus_pane_right = "alt+r"
+
+# Close the active pane
+close_pane = "alt+x"
 
 # F1: jump to the target of the latest notification (e.g. an agent that finished)
 open_notification_target = "f1"
