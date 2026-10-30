@@ -138,6 +138,32 @@ open_notification_target = "f1"
 
 ```
 
+## Plugin: herdr-file-viewer
+
+[herdr-file-viewer](https://github.com/smarzban/herdr-file-viewer) is a plugin that opens a file viewer in a split or a tab inside herdr (Windows details: [windows.md](https://github.com/smarzban/herdr-file-viewer/blob/main/docs/windows.md)).
+
+Install (on Windows herdr must be on its pre-release update channel; requires Windows PowerShell 5.1):
+
+```bash
+herdr plugin install smarzban/herdr-file-viewer
+```
+
+Add the shortcuts to `config.toml` (Windows uses the `-windows` action IDs; on Linux/macOS drop the `-windows` suffix), then reload with `F5`:
+
+```toml
+[[keys.command]]
+key = "prefix+f"
+type = "plugin_action"
+command = "herdr-file-viewer.open-file-viewer-windows"
+description = "open file viewer in split"
+
+[[keys.command]]
+key = "prefix+shift+f"
+type = "plugin_action"
+command = "herdr-file-viewer.open-file-viewer-tab-windows"
+description = "open file viewer in tab"
+```
+
 ## Open/edit config.toml file in Herdr in nano (or your preferred editor)
 
 ```bash
