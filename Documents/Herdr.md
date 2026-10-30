@@ -29,6 +29,31 @@ herdr config check
 herdr server reload-config
 ```
 
+## Howto switch panes
+
+Default keys, pressed after the prefix `ctrl+b` (release, then press the key):
+
+| Key         | Action                |
+| ----------- | --------------------- |
+| `h`         | focus pane left       |
+| `j`         | focus pane down       |
+| `k`         | focus pane up         |
+| `l`         | focus pane right      |
+| `tab`       | cycle to next pane    |
+| `shift+tab` | cycle to previous pane |
+| `z`         | zoom the current pane |
+
+You can also click a pane with the mouse to focus it.
+
+To skip the prefix, bind direct keys under `[keys]` (see [My keybindings](#my-keybindings)) and reload with `F5`:
+
+```toml
+focus_pane_left = "alt+l"
+focus_pane_down = "alt+d"
+focus_pane_up = "alt+u"
+focus_pane_right = "alt+r"
+```
+
 ## Useful commands
 
 ```bash
@@ -134,6 +159,12 @@ previous_workspace = "alt+up"
 next_workspace = "alt+down"
 new_workspace = "alt+shift+t"
 close_workspace = "alt+shift+w"
+
+# Panes: move focus without the prefix
+focus_pane_left = "alt+h"
+focus_pane_down = "alt+j"
+focus_pane_up = "alt+k"
+focus_pane_right = "alt+l"
 
 # F1: jump to the target of the latest notification (e.g. an agent that finished)
 open_notification_target = "f1"
