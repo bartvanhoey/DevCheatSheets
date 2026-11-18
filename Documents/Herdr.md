@@ -182,19 +182,20 @@ close_pane = "alt+x"
 # F1: jump to the target of the latest notification (e.g. an agent that finished)
 open_notification_target = "f1"
 
-
 # Move the active workspace up/down in the sidebar (no native key exists; uses the socket API)
+# The script (see below) is in ~/.config/herdr/scripts/move-workspace.py (Linux/macOS) or %APPDATA%\herdr\scripts\move-workspace.py (Windows).
 [[keys.command]]
 key = "alt+shift+up"
 type = "shell"
-command = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:/Users/VanhoeyB/.herdr/scripts/move-workspace.ps1 up"
+command = "python3 ~/.config/herdr/scripts/move-workspace.py up"
 description = "move workspace up"
 
 [[keys.command]]
 key = "alt+shift+down"
 type = "shell"
-command = "powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:/Users/VanhoeyB/.herdr/scripts/move-workspace.ps1 down"
+command = "python3 ~/.config/herdr/scripts/move-workspace.py down"
 description = "move workspace down"
+
 
 [[keys.command]]
 key = "prefix+f"
@@ -207,6 +208,55 @@ key = "prefix+shift+f"
 type = "plugin_action"
 command = "herdr-file-viewer.open-file-viewer-tab-windows"
 description = "open file viewer in tab"
+```
+
+```bash
+# ~/.config/herdr/scripts/move-workspace.py
+#!/usr/bin/env python3
+"""Usage: move-workspace.py up|down  (moves the active workspace one place in the sidebar)."""
+import json, os, socket, sys
+
+direction = sys.argv[1] if len(sys.argv) > 1 else ""
+if direction not in ("up", "down"):
+    sys.exit("usage: move-workspace.py up|down")
+
+sock_path = os.environ.get("HERDR_SOCKET_PATH") or os.path.expanduser("~/.config/herdr/herdr.sock")
+
+def send(method, params):
+    # The server closes the connection after each response: one connection per request.
+    with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as s:
+        s.settimeout(2)
+        s.connect(sock_path)
+        s.sendall((json.dumps({"id": "r", "method": method, "params": params}) + "\n").encode())
+        buf = b""
+        while not buf.endswith(b"\n"):
+            chunk = s.recv(65536)
+            if not chunk:
+                break
+            buf += chunk
+    return json.loads(buf)
+
+workspaces = send("workspace.list", {})["result"]["workspaces"]
+ids = [w["workspace_id"] for w in workspaces]
+active = os.environ.get("HERDR_ACTIVE_WORKSPACE_ID")
+if active not in ids:
+    active = next((w["workspace_id"] for w in workspaces if w.get("focused")), None)
+if active is None:
+    sys.exit("no active workspace found")
+
+idx = ids.index(active)
+if direction == "up":
+    if idx == 0:
+        sys.exit(0)
+    target = idx - 1
+else:
+    if idx == len(ids) - 1:
+        sys.exit(0)
+    target = idx + 2  # insert_index is evaluated before the workspace is removed
+
+r = send("workspace.move", {"workspace_id": active, "insert_index": target})
+if r.get("error"):
+    sys.exit(json.dumps(r["error"]))
 ```
 
 ## Plugin: herdr-file-viewer
