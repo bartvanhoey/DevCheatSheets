@@ -1,4 +1,4 @@
-## 10 Options for Maintainable .NET Apps
+## 10 Options for creating more maintainable .NET apps by Scott Sauber
 
 `"Every system tends towards complexity, slowness and difficulty
 Staying simple, fast and easy-to-use is a battle that must be fought everyday" - Guillermo Rauch`

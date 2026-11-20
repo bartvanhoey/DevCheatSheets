@@ -1,4 +1,4 @@
-## Rider
+## Rider Tips & Tricks
 
 ### My Favorite Rider Shortcut Keys (Keymap Visual Studio)
 

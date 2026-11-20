@@ -1,9 +1,3 @@
----
-title: Home
-nav_order: 1
-permalink: /
----
-
 # DevCheatSheets
 
 [![pages-build-deployment](https://github.com/bartvanhoey/DevCheatSheets/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/bartvanhoey/DevCheatSheets/actions/workflows/pages/pages-build-deployment) [![Validate](https://github.com/bartvanhoey/DevCheatSheets/actions/workflows/validate.yml/badge.svg)](https://github.com/bartvanhoey/DevCheatSheets/actions/workflows/validate.yml)
@@ -25,8 +19,8 @@ Build A? · Quality A? · Architecture A? · Tests C?* · Dead Code A? · API B~
 | Topic | Description |
 |-------|-------------|
 | [VS Code](Documents/VsCode.md) | Favorite shortcuts, extensions and settings tweaks |
-| [Rider](Documents/Rider.md) | Favorite shortcuts (Visual Studio keymap) and tips |
-| [Vim](Documents/VimEditor.md) | Essential commands to edit, save and quit |
+| [Rider Keyboard Shortcuts](Documents/Rider.md) | Favorite shortcuts (Visual Studio keymap) and tips |
+| [Vim Editor](Documents/VimEditor.md) | Essential commands to edit, save and quit |
 | [Notepad++](Documents/NotepadPlusPlus.md) | Notepad++ tips and tricks |
 
 ## DevOps & Cloud
@@ -61,17 +55,17 @@ Build A? · Quality A? · Architecture A? · Tests C?* · Dead Code A? · API B~
 
 | Topic | Description |
 |-------|-------------|
-| [Developer Productivity](Documents/BoostProductivity.md) | Ways to enhance developer productivity |
+| [Boost your Productivity](Documents/BoostProductivity.md) | Ways to enhance developer productivity |
 | [Refactoring Techniques](Documents/RefactoringTechniques.md) | What makes code hard to work with and how to clean it up |
 | [10 Options for Maintainable .NET Apps](Documents/ScottSauber10OptionsToCreateMoreMaintainableDotNetApps.md) | Scott Sauber's 10 options for more maintainable .NET apps |
-| [Claude Code Skills](Documents/UsefulClaudeCodeSkills.md) | Claude Code skills and commands worth using |
+| [Useful Claude Code Skills](Documents/UsefulClaudeCodeSkills.md) | Claude Code skills and commands worth using |
 
 ## Tools & General
 
 | Topic | Description |
 |-------|-------------|
-| [Git](Documents/Git.md) | Git and GitHub CLI tips, authentication and common fixes |
-| [Command Line](Documents/TopTenCommandLineCommands.md) | Handy command line commands, e.g. find the process on a port |
+| [All about Git](Documents/Git.md) | Git and GitHub CLI tips, authentication and common fixes |
+| [Command Line Commands](Documents/TopTenCommandLineCommands.md) | Handy command line commands, e.g. find the process on a port |
 | [PowerShell](Documents/PowerShell.md) | PowerShell one-liners for CSV, JSON and code statistics |
 | [Chrome](Documents/Chrome.md) | Chrome keyboard shortcuts and extensions |
 | [Herdr](Documents/Herdr.md) | Herdr terminal multiplexer for AI agents: keys, config and plugins |

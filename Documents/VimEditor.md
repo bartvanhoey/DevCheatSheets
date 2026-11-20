@@ -1,4 +1,4 @@
-## Vim
+## Vim editor Commands
 
 ### Start the interactive Vim tutorial (run in a shell, not inside Vim)
 

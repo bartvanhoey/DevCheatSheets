@@ -1,4 +1,4 @@
-## Insomnia
+## Insomnia by Kong
 
 ## How to chain requests using Insomnia
 

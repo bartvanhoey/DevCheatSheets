@@ -1,4 +1,4 @@
-## EF Core
+## EntityFrameworkCore Commands
 
 
 ### How to install EntityFramework tools

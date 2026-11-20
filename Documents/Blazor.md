@@ -1,4 +1,4 @@
-## Blazor
+## Blazor Tips and Tricks
 
 ### File Nesting in VS Code
 

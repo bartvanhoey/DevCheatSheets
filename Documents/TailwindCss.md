@@ -1,4 +1,4 @@
-## Tailwind CSS
+## TailwindCss
 
 ## Tailwind CLI Installation
 
