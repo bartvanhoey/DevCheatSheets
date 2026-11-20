@@ -6,6 +6,14 @@ Personal cheat-sheet collection for developer tools, commands, and tips —
 primarily aimed at **.NET developers** working on **Windows** with **VS Code** or **Rider**.
 Topics include Git, Docker, Kubernetes, .NET, Blazor, VS Code, Rider, and more.
 
+## Health Audit
+
+**Last assessed:** 2026-11-20 | **Overall:** 2.6 — Fair
+
+Build A? · Quality F? · Architecture A? · Tests D?* · Dead Code B? · API B~? · Security B? · Docs B?
+
+> Full report: [reports/health-audit-2026-11-20.md](reports/health-audit-2026-11-20.md)
+
 ## IDE & Editors
 
 | Topic | Description |
