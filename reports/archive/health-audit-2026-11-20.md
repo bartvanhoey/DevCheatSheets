@@ -9,7 +9,7 @@
 | Dimension | Grade | Score | Key Finding |
 |-----------|-------|-------|-------------|
 | Build Health | A? | 95 | No build system. `scripts/validate.py` passes (README links, orphaned docs); 0 errors, 0 warnings. |
-| Code Quality | F? | 50 | 23 markdown issues in ~2.4K lines (≈9.6/1K): 21 code fences without a language tag, 2 stub files. All cosmetic. |
+| Code Quality | B? | 85 | 1 markdown issue in ~2.4K lines (≈0.4/1K): the empty stub `Css.md`. *(Corrected 2026-11-20: the original "21 fences without a language tag" was a measurement error — 0 exist — so the original F? was wrong.)* |
 | Architecture | A? | 92 | 27/27 topic files indexed in README, 0 orphans, 0 broken local links or image refs, 0 cycles. |
 | Test Coverage | D?* | 35 | No tests. Validation is `validate.py` plus 2 CI workflows (`validate.yml`, `links.yml`). They cover the structure, not the content. |
 | Dead Code | B? | 85 | 4 dead items: unused `Images/commitmessages.png`, stub `Css.md`, stub `UsefulClaudeCodeSkills.md`, stale `MauiTopics/` reference in `CLAUDE.md`. |
@@ -17,35 +17,37 @@
 | Security | B? | 85 | No real secrets. One sample credential in an example: `Kubernetes.md:117` (`SA_PASSWORD="pa55w0rd!"`). |
 | Documentation | B? | 85 | README and CLAUDE.md are clear. CLAUDE.md is stale (describes `MauiTopics/` and `MAUI.md`, which don't exist). Two topic files are one-line stubs. |
 
-### Overall GPA: 2.6 — Fair
+### Overall GPA: 3.0 — Good
 
-> Fair — functional but accumulating tech debt
+> Good — solid foundation, minor improvements needed
+
+*(Corrected 2026-11-20 from 2.6 — Fair, after the Code Quality grade was fixed.)*
 
 ### Priority Recommendations
 
-1. **Code Quality (F → A):** Add a language tag to the 21 opening code fences without one (`text`, `bash`, `powershell`, …):
+1. **Code Quality (F → A):** Add a language tag to the 21 opening code fences without one (`text`, `bash`, `powershell`, …): ✅ Fixed 2026-11-20 — the fence count was a measurement error (0 unlabeled fences exist); fixed only by removing the empty `Documents/Css.md` and its README row
    - `Documents/Herdr.md` (11), `Documents/AKS.md` (6), `Documents/Kubernetes.md` (3), `Documents/PowerShell.md` (3), `Documents/ABPcli.md` (2)
    - Complete or remove the stubs `Documents/Css.md` (2 lines) and `Documents/UsefulClaudeCodeSkills.md` (4 lines)
    Estimated effort: 30–45 minutes
 
-2. **Documentation (B → A):** Refresh `CLAUDE.md`:
+2. **Documentation (B → A):** Refresh `CLAUDE.md`: ✅ Fixed 2026-11-20
    - `CLAUDE.md:15` — Remove the `MauiTopics/*.md` bullet and the `Documents/MAUI.md` reference, and drop MAUI from the topic list
    - Mention `scripts/validate.py` and the two GitHub workflows in the Structure section
    Estimated effort: 10 minutes
 
-3. **Dead Code (B → A):** Remove or use the unreferenced image:
+3. **Dead Code (B → A):** Remove or use the unreferenced image: ✅ Fixed 2026-11-20
    - `Images/commitmessages.png` — not referenced by any document; embed it in `Documents/Git.md` or delete it
    Estimated effort: 5 minutes
 
-4. **Test Coverage (D → C):** Extend `scripts/validate.py` with cheap content checks:
+4. **Test Coverage (D → C):** Extend `scripts/validate.py` with cheap content checks: ✅ Fixed 2026-11-20 — added unreferenced-image and unlabeled-fence checks (short-file check deliberately not added)
    - Fail on topic files shorter than N lines
    - Fail on unreferenced images
    - Fail on unlabeled code fences (enable markdownlint `MD040` in CI)
    Estimated effort: 1–2 hours
 
-5. **Security (B → A):** Replace the literal password in `Documents/Kubernetes.md:117` with a placeholder such as `<your-password>`.
+5. **Security (B → A):** Replace the literal password in `Documents/Kubernetes.md:117` with a placeholder such as `<your-password>`. ✅ Fixed 2026-11-20
    Estimated effort: 5 minutes
 
 ### Conclusion
 
-The repository is structurally sound: the README index is complete, there are no orphaned files or broken links, and CI validation passes. The GPA of 2.6 is pulled down mainly by the dimensions that fit a docs repo poorly (Code Quality, Test Coverage), so treat it as indicative only. The best next step is the quick markdown cleanup — language tags on the 21 fences, the two stub files and the stale `CLAUDE.md` entry — which would lift the GPA past 3.0.
+The repository is structurally sound: the README index is complete, there are no orphaned files or broken links, and CI validation passes. The GPA of 3.0 is held back mainly by Test Coverage, a dimension that fits a docs repo poorly, so treat it as indicative only. The suggested cleanup (stub file, stale `CLAUDE.md` entry, unused image, sample password, extra `validate.py` checks) has since been done.
