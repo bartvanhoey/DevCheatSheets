@@ -1,4 +1,4 @@
-## Docker Commands
+## Docker
 
 ### Images
 

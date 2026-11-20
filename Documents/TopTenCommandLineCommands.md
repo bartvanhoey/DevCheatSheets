@@ -1,4 +1,4 @@
-## Command Line Commands
+## Command Line
 
 1. Find out which process runs on a given port
 

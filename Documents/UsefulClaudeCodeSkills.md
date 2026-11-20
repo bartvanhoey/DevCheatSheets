@@ -1,4 +1,4 @@
-## Useful Claude Code Skills
+## Claude Code Skills
 
 ### /tdd-workflow by affaan-m
 

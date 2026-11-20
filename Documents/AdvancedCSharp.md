@@ -1,4 +1,4 @@
-## Advanced C# Concepts a Senior Developer Should Use Daily
+## Advanced C#
 
 1. **Generics** — Write type-safe, reusable code without duplicating logic for each type (`List<T>`, `Repository<T>`).
 2. **Reflection** — Inspect and invoke types, methods, and properties at runtime via `System.Reflection`.

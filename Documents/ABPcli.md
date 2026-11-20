@@ -1,4 +1,4 @@
-## ABP Cli commands
+## ABP CLI
 
 ## Install or upgrade the ABP CLI
 

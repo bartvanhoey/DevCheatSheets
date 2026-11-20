@@ -1,4 +1,4 @@
-## Enhancing Developer Productivity
+## Developer Productivity
 
 1. **Invest in a High-Quality Desk Setup:**
    - Use at least two monitors (minimum 27", such as LG).

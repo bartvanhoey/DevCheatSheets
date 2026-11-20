@@ -1,4 +1,4 @@
-## Notepad++ Tips And Tricks
+## Notepad++
 
 ### Keyboard shortcuts
 

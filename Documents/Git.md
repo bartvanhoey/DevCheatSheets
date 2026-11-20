@@ -1,4 +1,4 @@
-## Git and GitHub Tips and Tricks
+## Git
 
 ### Install GitHub CLI
 

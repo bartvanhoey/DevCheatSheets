@@ -1,4 +1,4 @@
-## Visual Studio Code Tips And Tricks
+## VS Code
 
 ## My Favorite Visual Studio Code Shortcut Keys
 

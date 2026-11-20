@@ -1,4 +1,4 @@
-## Azurite emulator for local Azure Storage development
+## Azurite
 
 ### Install Azurite
 
