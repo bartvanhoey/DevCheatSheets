@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validates structural consistency of the Usefulness cheat-sheet repo.
+"""Validates structural consistency of the DevCheatSheets repo.
 
 Run manually:   python scripts/validate.py
 Run in CI:      python scripts/validate.py  (exit 1 on any failure)

@@ -1,3 +1,9 @@
 title: DevCheatSheets
 description: Developer cheat-sheets for .NET, Git, Docker, VS Code, and more.
 remote_theme: just-the-docs/just-the-docs
+exclude:
+  - CLAUDE.md
+  - reports/
+  - scripts/
+  - lychee.toml
+  - Publish.bat

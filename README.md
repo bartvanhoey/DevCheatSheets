@@ -12,7 +12,7 @@ Topics include Git, Docker, Kubernetes, .NET, Blazor, VS Code, Rider, and more.
 
 Build A? · Quality A? · Architecture A? · Tests C?* · Dead Code A? · API B~? · Security A? · Docs A?
 
-> Full report: [reports/archive/health-audit-2026-11-20-2.md](reports/archive/health-audit-2026-11-20-2.md)
+> Full report: [reports/archive/health-audit-2026-11-20-2.md](https://github.com/bartvanhoey/DevCheatSheets/blob/gh-pages/reports/archive/health-audit-2026-11-20-2.md)
 
 ## IDE & Editors
 

@@ -18,6 +18,7 @@ The repository is published via GitHub Pages directly from the `gh-pages` branch
 
 ## Conventions
 
-- `.markdownlint.json` disables `MD041` (first line must be a top-level heading) and `MD013` (line length) — don't "fix" files to satisfy these rules.
+- `.markdownlint.json` disables `MD041` (first line must be a top-level heading), `MD013` (line length), `MD020` (spaces inside closed ATX headings) and `MD060` (table column style) — don't "fix" files to satisfy these rules.
+- The GitHub Pages site (just-the-docs theme) builds its sidebar from each page's first heading, so that heading is the page's nav title. Repo-only files (`CLAUDE.md`, `reports/`, `scripts/`) are excluded from the site via `exclude:` in `_config.yml`.
 - Commit messages are generic (`Update`) for routine content edits — `Publish.bat` simply runs `git pull && git add . && git commit -m Update && git push`. Don't invent more elaborate commit messages for routine doc additions/edits unless asked.
 - Keep new entries consistent with the existing style in a file: a `##`/`###` heading describing the problem or task, then a short explanation, then a fenced code block with the command/snippet.
