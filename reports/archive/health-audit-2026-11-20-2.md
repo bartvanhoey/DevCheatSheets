@@ -28,7 +28,7 @@
    - Optionally also require a trailing newline (flags `UsefulClaudeCodeSkills.md`)
    Estimated effort: 30–60 minutes
 
-2. **API Surface (B → A):** Optional polish:
+2. **API Surface (B → A):** Optional polish: 🚫 Won't fix
    - Shorten `Documents/ScottSauber10OptionsToCreateMoreMaintainableDotNetApps.md` (and its README link). Renaming breaks any existing external links to the old URL, so only do this if nobody links to it.
    Estimated effort: 10 minutes
 
