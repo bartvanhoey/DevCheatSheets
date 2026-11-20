@@ -96,7 +96,7 @@ Herdr works with a config file. The file lives at:
 
 ```toml
 # C:\Users\<YOUR_USERNAME>\AppData\Roaming\herdr\config.toml
-
+# nano ~/.config/herdr/config.toml
 onboarding = false
 
 [ui.sound]
@@ -167,7 +167,7 @@ reload_config = "f5"
 # Spaces (workspaces): alt+up/down
 previous_workspace = "alt+up"
 next_workspace = "alt+down"
-new_workspace = "alt+shift+t"
+new_workspace = ["alt+shift+t", "ctrl+n"]
 close_workspace = "alt+shift+w"
 
 # Panes: move focus without the prefix
@@ -208,6 +208,8 @@ key = "prefix+shift+f"
 type = "plugin_action"
 command = "herdr-file-viewer.open-file-viewer-tab-windows"
 description = "open file viewer in tab"
+
+
 ```
 
 ```bash
