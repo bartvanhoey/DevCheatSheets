@@ -11,8 +11,7 @@ The repository is published via GitHub Pages directly from the `gh-pages` branch
 ## Structure
 
 - `README.md` — the index page: a Markdown table linking to every file in `Documents/`. When adding a new topic file, add a corresponding row here.
-- `Documents/*.md` — one file per topic (e.g. `Git.md`, `Docker.md`, `VsCode.md`, `MAUI.md`). Entries within a file are typically a `##` heading naming a task/problem ("Howto handle ...") followed by an explanation and/or fenced code block.
-- `MauiTopics/*.md` — deeper-dive notes on specific MAUI techniques (Acrylic effect, Componentization, Bindable property generator, etc.), referenced from `Documents/MAUI.md`.
+- `Documents/*.md` — one file per topic (e.g. `Git.md`, `Docker.md`, `VsCode.md`). Entries within a file are typically a `##` heading naming a task/problem ("Howto handle ...") followed by an explanation and/or fenced code block.
 - `Images/` — screenshots referenced by the Markdown docs.
 
 ## Conventions

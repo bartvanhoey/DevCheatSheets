@@ -27,9 +27,9 @@
 
 #### 🟢 Low Priority / Observations
 
-- `README.md` — Structure is clear and well-organised. Categories (IDE & Editors, DevOps & Cloud, .NET & C#, etc.) logically group all 26 topic files. Index is complete; every file in `Documents/` has a corresponding row.
-- `CLAUDE.md` — Accurately describes the repository's structure and conventions. Good onboarding resource.
-- `MauiTopics/` — Mentioned in CLAUDE.md as a directory for deeper MAUI notes but does not currently exist. If MAUI content is planned, either create the directory or remove the reference from CLAUDE.md.
+- `README.md` — Structure is clear and well-organised. Categories (IDE & Editors, DevOps & Cloud, .NET & C#, etc.) logically group all 26 topic files. Index is complete; every file in `Documents/` has a corresponding row. 🚫 Won't fix
+- `CLAUDE.md` — Accurately describes the repository's structure and conventions. Good onboarding resource. 🚫 Won't fix
+- `MauiTopics/` — Mentioned in CLAUDE.md as a directory for deeper MAUI notes but does not currently exist. If MAUI content is planned, either create the directory or remove the reference from CLAUDE.md. ✅ Fixed 2026-11-20
 
 ---
 
@@ -127,7 +127,7 @@
 
 #### 🟡 Medium Priority
 
-- `Documents/PowerShell.md` — **Stub file with only 3 entries.** PowerShell is a primary tool for Windows/.NET developers (the stated audience), yet this is the thinnest file in the repo. ⏭ Won't fix
+- `Documents/PowerShell.md` — **Stub file with only 3 entries.** PowerShell is a primary tool for Windows/.NET developers (the stated audience), yet this is the thinnest file in the repo. 🚫 Won't fix
   - **Recommendation:** Expand with common PowerShell patterns relevant to the .NET/Windows workflow.
   - **Effort:** 1–2 hours
 
@@ -136,8 +136,8 @@
 
 #### 🟢 Low Priority / Observations
 
-- `.vscode/settings.json` — `cSpell.words` list is well-maintained and alphabetically ordered.
-- `.markdownlint.json` — Suppresses `MD041`, `MD013`, `MD020`, `MD060` — all appropriate for this cheat-sheet format.
+- `.vscode/settings.json` — `cSpell.words` list is well-maintained and alphabetically ordered. 🚫 Won't fix
+- `.markdownlint.json` — Suppresses `MD041`, `MD013`, `MD020`, `MD060` — all appropriate for this cheat-sheet format. 🚫 Won't fix
 - Git commit history shows consistent activity and emoji conventional commit style. Good hygiene.
 
 ---
