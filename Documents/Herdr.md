@@ -4,7 +4,7 @@
 
 Docs: <https://herdr.dev/docs/>
 
-## Howto start, detach and reattach a session
+## How to start, detach and reattach a session
 
 ```bash
 # Start herdr in the directory where your work lives (also reattaches to a running session)
@@ -14,7 +14,7 @@ herdr
 # Press ctrl+b, release, then press q
 ```
 
-## Howto reload the Herdr config
+## How to reload the Herdr config
 
 After editing `config.toml`, apply the changes without restarting herdr or its panes:
 
@@ -29,7 +29,7 @@ herdr config check
 herdr server reload-config
 ```
 
-## Howto switch panes
+## How to switch panes
 
 Default keys, pressed after the prefix `ctrl+b` (release, then press the key):
 
@@ -54,7 +54,7 @@ focus_pane_up = "alt+u"
 focus_pane_right = "alt+r"
 ```
 
-## Howto close the active pane
+## How to close the active pane
 
 Bind a direct key under `[keys]` (see [My keybindings](#my-keybindings)) and reload with `F5`:
 

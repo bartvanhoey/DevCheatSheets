@@ -2,38 +2,38 @@
 
 ## Solution
 
-### Howto create a new solution
+### How to create a new solution
 
 ```bash
 dotnet new sln -n [YourSolutionName]
 ```
 
-### Howto add project to solution
+### How to add project to solution
 
 ```bash
 dotnet sln add [yourProjectName]\[yourProjectName].csproj
 ```
 
-### Howto create a new class library project
+### How to create a new class library project
 
 ```bash
 dotnet new classlib -n [YourProjectName]
 ```
 
-### Howto see installed dotnet sdks
+### How to see installed dotnet sdks
 
 ```bash
 dotnet --list-sdks
 ```
 
-### Howto specify dotnet version with dotnet new
+### How to specify dotnet version with dotnet new
 
 ```bash
 dotnet new web -h
 dotnet new web -o MySimpleWebApp --framework|-f net5.0
 ```
 
-### Howto add reference to other project
+### How to add reference to other project
 
  ```bash
  dotnet add reference ../../src/Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme/Volo.Abp.AspNetCore.Components.WebAssembly.BasicTheme.csproj

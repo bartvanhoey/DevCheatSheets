@@ -1,13 +1,21 @@
 ## ABP Cli commands
 
-## Install or upgrade ABP framework
+## Install or upgrade the ABP CLI
+
+Since ABP 8.2 the CLI is `Volo.Abp.Studio.Cli` (the old `Volo.Abp.Cli` is only needed for older solutions).
 
 ```bash
-  dotnet tool install -g Volo.Abp.Cli || dotnet tool update -g Volo.Abp.Cli
+  dotnet tool install -g Volo.Abp.Studio.Cli || dotnet tool update -g Volo.Abp.Studio.Cli
 ```
 
-## Upgrade ABP framework to a Release Candidate version
+## Upgrade the ABP CLI to a Release Candidate version
 
 ```bash
-  dotnet tool update Volo.Abp.Cli -g --version 4.1.0-rc.2
+  dotnet tool update -g Volo.Abp.Studio.Cli --prerelease
+```
+
+Or pin a specific version:
+
+```bash
+  dotnet tool update -g Volo.Abp.Studio.Cli --version <version>
 ```

@@ -105,7 +105,7 @@ container 302e8bd is using its referenced image 3334b287844 -> a stopped contain
 |`docker inspect <volume-name>`                                                                  | inspect a volume                                              |
 |`docker run -d -p 8083:3000 --name <container-name> -v /d:/app:/<volume-name> <image-name>`     | Create and run container with volume path d:/app              |
 
-### Howto resize Docker Virtual Hard disk
+### How to resize Docker Virtual Hard disk
 
 | Command                                                                                                   |               Action                               |
 |-----------------------------------------------------------------------------------------------------------|----------------------------------------------------|

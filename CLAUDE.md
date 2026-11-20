@@ -11,7 +11,7 @@ The repository is published via GitHub Pages directly from the `gh-pages` branch
 ## Structure
 
 - `README.md` — the index page: a Markdown table linking to every file in `Documents/`. When adding a new topic file, add a corresponding row here.
-- `Documents/*.md` — one file per topic (e.g. `Git.md`, `Docker.md`, `VsCode.md`). Entries within a file are typically a `##` heading naming a task/problem ("Howto handle ...") followed by an explanation and/or fenced code block.
+- `Documents/*.md` — one file per topic (e.g. `Git.md`, `Docker.md`, `VsCode.md`). Entries within a file are typically a `##` heading naming a task/problem ("How to handle ...") followed by an explanation and/or fenced code block.
 - `Images/` — screenshots referenced by the Markdown docs.
 - `scripts/validate.py` — structural check (README links resolve, no orphaned files in `Documents/`, no unreferenced images, no code fences without a language tag, no headings without content). Run `python3 scripts/validate.py` after adding or renaming a topic file; it exits 1 on any failure.
 - `.github/workflows/` — `validate.yml` runs `validate.py` on push/PR; `links.yml` runs a link check configured by `lychee.toml`.

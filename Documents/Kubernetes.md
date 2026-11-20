@@ -1,6 +1,6 @@
 ## Kubernetes
 
-## Howto connect to K8S dashboard in your local Docker Engine
+## How to connect to K8S dashboard in your local Docker Engine
 
 1. Docker -> Settings -> Kubernetes -> Enable Kubernetes [Apply]
 2. Open a command prompt and enter `kubectl describe secret`

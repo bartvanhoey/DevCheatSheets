@@ -1,9 +1,9 @@
 ## PowerShell
 
-### Howto convert csv to JSON
+### How to convert csv to JSON
 
 ```powershell
-    $items = import-csv .\items.csv | ConvertTo-Json > items.json
+    Import-Csv .\items.csv | ConvertTo-Json | Set-Content items.json
 ```
 
 ### Count the numbers of lines in a C# codebase
@@ -12,8 +12,8 @@
     (gci -include *.cs,*.xaml -recurse | select-string .).Count
 ```
 
-### Export data from a table from (LocalDb)\MSSQLLocalDB to a file
+### Export a table from (LocalDb)\MSSQLLocalDB to a CSV file
 
 ```powershell
- bcp GrawSkyDevDb.dbo.InitSondeTable out "C:\CTemp\InitSondeTable.csv" -c -t -S "(localdb)\MSSQLLocalDB" -T
+ bcp <DatabaseName>.dbo.<TableName> out "C:\Temp\<TableName>.csv" -c -t "," -S "(localdb)\MSSQLLocalDB" -T
 ```
