@@ -16,6 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent
 README = ROOT / "README.md"
 DOCS_DIR = ROOT / "Documents"
+IMAGES_DIR = ROOT / "Images"
 
 
 # ---------------------------------------------------------------------------
@@ -67,6 +68,38 @@ def check_orphaned_docs() -> list[str]:
     return errors
 
 
+def check_unreferenced_images() -> list[str]:
+    """Every file in Images/ must be referenced from README.md or a Documents/ file."""
+    if not IMAGES_DIR.exists():
+        return []
+    text = README.read_text(encoding="utf-8") if README.exists() else ""
+    for doc in DOCS_DIR.glob("*.md"):
+        text += doc.read_text(encoding="utf-8")
+    return [
+        f"{_rel(img)}: not referenced from README.md or Documents/"
+        for img in sorted(IMAGES_DIR.iterdir())
+        if img.is_file() and img.name not in text
+    ]
+
+
+def check_unlabeled_fences() -> list[str]:
+    """Every opening code fence in Documents/ must carry a language tag."""
+    errors = []
+    for doc in sorted(DOCS_DIR.glob("*.md")):
+        in_fence = False
+        for i, line in enumerate(doc.read_text(encoding="utf-8").split("\n"), 1):
+            stripped = line.strip()
+            if not stripped.startswith("```"):
+                continue
+            if not in_fence:
+                in_fence = True
+                if stripped == "```":
+                    errors.append(f"{_rel(doc)}:{i}: code fence has no language tag")
+            else:
+                in_fence = False
+    return errors
+
+
 # ---------------------------------------------------------------------------
 # Runner
 # ---------------------------------------------------------------------------
@@ -74,6 +107,8 @@ def check_orphaned_docs() -> list[str]:
 CHECKS = [
     check_readme_links,
     check_orphaned_docs,
+    check_unreferenced_images,
+    check_unlabeled_fences,
 ]
 
 

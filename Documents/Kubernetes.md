@@ -114,4 +114,4 @@ kubectl delete -f rbac.yaml
 
 | Command                                                                                        | Action                                                       |
 |------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
-|`kubectl create secret generic mssql --from-literal=SA_PASSWORD="pa55w0rd!"`                    | create a secret                                              |
+|`kubectl create secret generic mssql --from-literal=SA_PASSWORD="<your-password>"`                    | create a secret                                              |

@@ -1,2 +1,8 @@
 #!/bin/sh
-python scripts/validate.py
+for py in python3 python py; do
+  if command -v "$py" >/dev/null 2>&1; then
+    exec "$py" scripts/validate.py
+  fi
+done
+echo "pre-push: no Python interpreter found (tried python3, python, py)" >&2
+exit 1

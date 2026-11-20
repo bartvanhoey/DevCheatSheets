@@ -8,11 +8,11 @@ Topics include Git, Docker, Kubernetes, .NET, Blazor, VS Code, Rider, and more.
 
 ## Health Audit
 
-**Last assessed:** 2026-11-20 | **Overall:** 2.6 — Fair
+**Last assessed:** 2026-11-20 | **Overall:** 3.0 — Good
 
-Build A? · Quality F? · Architecture A? · Tests D?* · Dead Code B? · API B~? · Security B? · Docs B?
+Build A? · Quality B? · Architecture A? · Tests D?* · Dead Code B? · API B~? · Security B? · Docs B?
 
-> Full report: [reports/health-audit-2026-11-20.md](reports/health-audit-2026-11-20.md)
+> Full report: [reports/archive/health-audit-2026-11-20.md](reports/archive/health-audit-2026-11-20.md)
 
 ## IDE & Editors
 
@@ -49,7 +49,6 @@ Build A? · Quality F? · Architecture A? · Tests D?* · Dead Code B? · API B~
 | Topic | Description |
 |-------|-------------|
 | [Tailwind CSS](Documents/TailwindCss.md) | Tailwind CLI setup and utility classes |
-| [CSS](Documents/Css.md) | CSS notes, incl. cascade layers |
 | [Next.js](Documents/NextJs.md) | Next.js setup, fixes and useful npm packages |
 
 ## Productivity & Learning
