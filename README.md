@@ -8,11 +8,11 @@ Topics include Git, Docker, Kubernetes, .NET, Blazor, VS Code, Rider, and more.
 
 ## Health Audit
 
-**Last assessed:** 2026-11-20 | **Overall:** 3.0 — Good
+**Last assessed:** 2026-11-20 | **Overall:** 3.6 — Excellent
 
-Build A? · Quality B? · Architecture A? · Tests D?* · Dead Code B? · API B~? · Security B? · Docs B?
+Build A? · Quality A? · Architecture A? · Tests C?* · Dead Code A? · API B~? · Security A? · Docs A?
 
-> Full report: [reports/archive/health-audit-2026-11-20.md](reports/archive/health-audit-2026-11-20.md)
+> Full report: [reports/archive/health-audit-2026-11-20-2.md](reports/archive/health-audit-2026-11-20-2.md)
 
 ## IDE & Editors
 

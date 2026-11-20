@@ -100,6 +100,42 @@ def check_unlabeled_fences() -> list[str]:
     return errors
 
 
+def check_empty_sections() -> list[str]:
+    """Every leaf heading in Documents/ must have body text before the next heading."""
+    heading_re = re.compile(r"^(#{1,6})\s+\S")
+    errors = []
+    for doc in sorted(DOCS_DIR.glob("*.md")):
+        # Collect (line_number, level) for headings outside code fences,
+        # plus the line numbers of non-blank, non-heading content lines.
+        headings: list[tuple[int, int]] = []
+        content_lines: list[int] = []
+        in_fence = False
+        for i, line in enumerate(doc.read_text(encoding="utf-8").split("\n"), 1):
+            stripped = line.strip()
+            if stripped.startswith("```"):
+                in_fence = not in_fence
+                content_lines.append(i)
+                continue
+            if in_fence:
+                content_lines.append(i)
+                continue
+            match = heading_re.match(line)
+            if match:
+                headings.append((i, len(match.group(1))))
+            elif stripped:
+                content_lines.append(i)
+        for idx, (line_num, level) in enumerate(headings):
+            if idx == 0:
+                continue  # the first heading is the page title, not a section
+            nxt =headings[idx + 1] if idx + 1 < len(headings) else None
+            if nxt is not None and nxt[1] > level:
+                continue  # parent heading: its subheadings are its body
+            end = nxt[0] if nxt else float("inf")
+            if not any(line_num < c < end for c in content_lines):
+                errors.append(f"{_rel(doc)}:{line_num}: heading has no content")
+    return errors
+
+
 # ---------------------------------------------------------------------------
 # Runner
 # ---------------------------------------------------------------------------
@@ -109,6 +145,7 @@ CHECKS = [
     check_orphaned_docs,
     check_unreferenced_images,
     check_unlabeled_fences,
+    check_empty_sections,
 ]
 
 

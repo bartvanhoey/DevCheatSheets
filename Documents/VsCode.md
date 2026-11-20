@@ -262,8 +262,6 @@ Search for **Post Commit Command** and select **push** in Git:Post Commit Comman
 1. Settings -> Keyboard Shortcuts -> Search for **CTRL+C** that closes Terminal
 2. Remove the keybinding
 
-### CTRL+Z Shortcut Stops a Process in the Terminal
-
 ### Set Enable Preview to false
 
 1. Settings -> Search for **Workbench Enable Preview**
